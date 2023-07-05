@@ -4,7 +4,7 @@
  * Hook implementations for umass_framework_google_search.module.
  */
 declare(strict_types=1);
-// use WebEco\Env;
+
 /**
  * Implements hook_page_top().
  */
@@ -24,10 +24,8 @@ function umass_framework_google_search_page_top(array &$page_top) {
         '#template' => '{{ include(template) }}',
         '#context' => [
             'template' => '@umass_framework_google_search/umass-framework-google-search-box.html.twig',
-            'site' => 'engineering',
+            'site' => getenv('FRAMEWORK_SITE_NAME') ? getenv('FRAMEWORK_SITE_NAME') : '',
         ],
         ];
     }
 }
-
-// Note replacing this Env::getSite()->getSiteName() with 'test' until we unpack the ENV logic

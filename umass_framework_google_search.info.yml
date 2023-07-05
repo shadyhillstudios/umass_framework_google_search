@@ -3,3 +3,5 @@ type: module
 description: Enables a search page where google search can be used.
 core_version_requirement: ^9 || ^10
 package: Framework
+
+dependencies: {}

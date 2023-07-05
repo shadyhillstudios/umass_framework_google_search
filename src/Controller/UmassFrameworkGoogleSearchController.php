@@ -8,9 +8,6 @@ use Drupal\Component\Utility\Xss;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
 
-// NOTE: Need to unpack logic of this ENV
-// use WebEco\Env;
-// Env::getSite()->getSiteName()
 /**
  * Delivers the Google Search results page.
  */
@@ -31,7 +28,7 @@ class UmassFrameworkGoogleSearchController extends ControllerBase
             '#template' => '{{ include(template) }}',
             '#context' => [
                 'template' => '@umass_framework_google_search/umass-framework-google-search-results.html.twig',
-                'site' => 'engineering',
+                'site' => getenv('FRAMEWORK_SITE_NAME') ? getenv('FRAMEWORK_SITE_NAME') : '',
                 'query' => $query,
             ],
         ];
