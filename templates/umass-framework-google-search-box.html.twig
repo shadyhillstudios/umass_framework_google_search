@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Template implementation for Google Search box.
+ *
+ * This relies on the search engine being configured in Google as "two-page"
+ * layout. This allows us to place the search box detached from the results,
+ * and will pick terms from the query params when rendering the results page.
+ * More info on the “Two-page layout” can be found in this doc page:
+ * https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox
+ *
+ * Available variables:
+ *  - site: The site machine name, such as "springfield", or "nursing".
+#}
+{{ attach_library('umass_framework_google_search/css') }}
+<script>
+  // @see https://developers.google.com/custom-search/docs/element for more
+  // info on how to interact with the initialization of google search elements.
+  const umassFrameworkInitializationCallback = function () {
+    google.setOnLoadCallback(function() {
+      // When the search box is ready, move the whole search box into the top
+      // hat, taking the place of the magnifying glass icon.
+      jQuery('#umass--global--header a#umass--global--search').replaceWith(jQuery('#umass--global--navigation--search'));
+    }, true);
+  };
+  window.__gcse = {
+    initializationCallback: umassFrameworkInitializationCallback,
+  };
+</script>
+<div id="umass--global--navigation--search">
+  <script async src="https://cse.google.com/cse.js?cx=006147596779141161600%3Ajfpwgwvuul4"></script>
+  {# "gcse-searchbox-only" and "data-resultsUrl" make this a "searchbox-only"
+    element, and will send users to `/search` upon submit, while
+    "data-as_sitesearch" will restrict search results to items indexed on this
+    particular site. #}
+  <div class="gcse-searchbox-only" data-as_sitesearch="www.umass.edu/{{ site }}" data-resultsUrl="/search"></div>
+</div>

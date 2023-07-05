@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file
+ * Hook implementations for umass_framework_google_search.module.
+ */
+declare(strict_types=1);
+// use WebEco\Env;
+/**
+ * Implements hook_page_top().
+ */
+function umass_framework_google_search_page_top(array &$page_top) {
+    // Based on custom module developed for WebEco
+    // This mimics what the webeco_global_branding module does, injecting markup
+    // in the page top element. Note that in the end this isn't the final location
+    // for this element, we have clientside javascript in the below template that
+    // will move it into its final place, after the search is initialized. This
+    // is necessary because we don't control the markup of the global header, but
+    // we want to replace its search icon with the contents of this template.
+    $route = \Drupal::routeMatch()->getRouteObject();
+    $is_admin = \Drupal::service('router.admin_context')->isAdminRoute($route);
+    if (!$is_admin) {
+        $page_top['umass_framework_google_search'] = [
+        '#type' => 'inline_template',
+        '#template' => '{{ include(template) }}',
+        '#context' => [
+            'template' => '@umass_framework_google_search/umass-framework-google-search-box.html.twig',
+            'site' => 'engineering',
+        ],
+        ];
+    }
+}
+
+// Note replacing this Env::getSite()->getSiteName() with 'test' until we unpack the ENV logic

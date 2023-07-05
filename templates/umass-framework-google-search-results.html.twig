@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Template implementation for Google Search results.
+ *
+ * This relies on the search engine being configured in Google as "two-page"
+ * layout. This allows us to place the search box detached from the results,
+ * and will pick terms from the query params when rendering the results page.
+ *
+ * Available variables:
+ *  - site: The site machine name, such as "springfield", or "nursing".
+ *  - query: The term being searched.
+#}
+
+{{ attach_library('umass_framework_google_search/css') }}
+<script async src="https://cse.google.com/cse.js?cx=006147596779141161600%3Ajfpwgwvuul4"></script>
+
+<div class="container">
+    <div class="row justify-content-center has-sidebar">
+        <div class="col main-content">
+            <div class="gcse-searchbox-only" data-as_sitesearch="www.umass.edu/{{ site }}" data-resultsUrl="/search"></div>
+            <div class="gcse-searchresults-only" data-as_sitesearch="www.umass.edu/{{ site }}"></div>
+        </div>
+        <div class="sidebar">
+            {% if query %}
+                <div>
+                    <h2>You are seeing search results from the {{ site }} site.</h2>
+                    <div class="search--more-results">Didn't find what you're looking for? <a href="https://www.umass.edu/search?q={{ query }}">Search all of umass.edu</a></div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

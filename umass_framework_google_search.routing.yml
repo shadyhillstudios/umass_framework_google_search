@@ -1,0 +1,7 @@
+umass_framework_google_search.search:
+  path: '/search'
+  defaults:
+    _controller: '\Drupal\umass_framework_google_search\Controller\UmassFrameworkGoogleSearchController::page'
+    _title_callback: '\Drupal\umass_framework_google_search\Controller\UmassFrameworkGoogleSearchController::title'
+  requirements:
+    _permission: 'access content'

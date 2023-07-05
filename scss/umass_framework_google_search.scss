@@ -1,0 +1,151 @@
+/* search form */
+#umass--global--navigation--search {
+	position: relative;
+	top: 6px;
+}
+#___gcse_0 .gsc-input,
+#___gcse_1 .gsc-input {
+	padding: 0 12px 0 0;
+}
+#___gcse_0 .gsc-input {
+	padding-left: 6px !important;
+}
+#___gcse_0 form.gsc-search-box,
+#___gcse_0 table.gsc-search-box {
+	margin-bottom: 0;
+}
+#___gcse_0 table tbody tr {
+	background-color: transparent;
+}
+#___gcse_0 .gsib_a {
+	padding: 0;
+}
+#___gcse_0 #gsc-i-id1 {
+	margin: 0 !important;
+	background: none !important;
+}
+#___gcse_0 .gsib_b {
+	padding: 0;
+}
+#___gcse_0 .gsc-search-button {
+	padding: 0;
+}
+#___gcse_0 .gsc-search-button-v2, 
+#___gcse_0 .gsc-search-button-v2:hover, 
+#___gcse_0 .gsc-search-button-v2:focus {
+	border-color: transparent;
+	background-color: transparent;
+}
+/* results */
+#___gcse_2 .gsc-control-cse {
+	border: none;
+	padding: 0;
+}
+#___gcse_2 .gsc-control-cse .gs-spelling, 
+#___gcse_2 .gsc-control-cse .gs-result .gs-title, 
+#___gcse_2 .gsc-control-cse .gs-result .gs-title * {
+	font-size: 1.5rem;
+	font-weight: 800;
+	line-height: 2rem;
+}
+#___gcse_2 .gs-result .gs-title *, 
+#___gcse_2 .gsc-cursor-page, 
+#___gcse_2 .gs-spelling a
+#___gcse_2 .gs-webResult.gs-result a.gs-title:visited, 
+#___gcse_2 .gs-webResult.gs-result a.gs-title:visited b, 
+#___gcse_2 .gs-imageResult a.gs-title:visited, 
+#___gcse_2 .gs-imageResult a.gs-title:visited b {
+	color: #881C1C;
+	-webkit-text-decoration: underline solid 2px rgba(0,0,0,0);
+	text-decoration: underline solid 2px rgba(0,0,0,0);
+	text-underline-offset: 4px;
+}
+#___gcse_2 .gs-webResult.gs-result a.gs-title:hover, 
+#___gcse_2 .gs-webResult.gs-result a.gs-title:hover b, 
+#___gcse_2 .gs-imageResult a.gs-title:hover, 
+#___gcse_2 .gs-imageResult a.gs-title:hover b,
+#___gcse_2 .gs-webResult.gs-result a.gs-title:focus, 
+#___gcse_2 .gs-webResult.gs-result a.gs-title:focus b, 
+#___gcse_2 .gs-imageResult a.gs-title:focus, 
+#___gcse_2 .gs-imageResult a.gs-title:focus b {
+	color: black;
+	-webkit-text-decoration-color: #881C1C;
+	text-decoration-color: #881C1C;
+	transition: color .12s ease-in,-webkit-text-decoration-color .12s ease-in;
+	transition: color .12s ease-in,text-decoration-color .12s ease-in;
+	transition: color .12s ease-in,text-decoration-color .12s ease-in,-webkit-text-decoration-color .12s ease-in;
+}
+#___gcse_2 .gs-promotion .gs-visibleUrl, 
+#___gcse_2 .gs-webResult .gs-visibleUrl {
+	color: #CBD3D6;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+#___gcse_2 .gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
+#___gcse_2 .gs-fileFormatType {
+	font-size: 1rem;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+#___gcse_2 .gs-web-image-box, 
+#___gcse_2 .gs-promotion-image-box {
+	float: right;	
+}
+#___gcse_2 .gsc-webResult.gsc-result, 
+#___gcse_2 .gsc-results .gsc-imageResult {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #E0E5E6;
+	margin-bottom: 3rem;
+	padding-bottom: 1rem;
+}
+@media (min-width: 80rem) {
+	#___gcse_2 .gsc-webResult.gsc-result, 
+	#___gcse_2 .gsc-results .gsc-imageResult {
+		margin-bottom: 3.5rem;
+		padding-bottom: 1.5rem;
+	}
+}
+/* pagination */
+#___gcse_2 .gsc-results .gsc-cursor {
+	margin-bottom: 6rem;
+	margin-top: .5rem;
+	display: flex;
+}
+#___gcse_2 .gsc-results .gsc-cursor-box .gsc-cursor-page {
+	align-items: center;
+	background-color: white;
+	border: 1px solid #881C1C;
+	color: #151515;
+	display: flex;
+	font-size: 1rem;
+	font-weight: 500;
+	height: 2rem;
+	justify-content: center;
+	line-height: 1.5rem;
+	margin-right: .5rem;
+	min-height: 0;
+	outline: 0 solid #0E0E0E;
+	text-decoration: none;
+	width: 2rem;
+	transition: outline .12s ease-in,color .12s ease-in,background-color .12s ease-in,border .12s ease-in;
+}
+#___gcse_2 .gsc-results .gsc-cursor-box .gsc-cursor-page:hover,
+#___gcse_2 .gsc-results .gsc-cursor-box .gsc-cursor-page:focus {
+	transition: outline .12s ease-in,color .12s ease-in,background-color .12s ease-in,border .12s ease-in;
+	background-color: #0E0E0E;
+	border: 1px solid #0E0E0E;
+	color: white;
+	outline: 4px solid #0E0E0E;
+}
+#___gcse_2 .gsc-results .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
+	background-color: #0E0E0E;
+	border: 2px solid #0E0E0E;
+	color: white;
+	transition: color .12s ease-in,background-color .12s ease-in,border .12s ease-in;
+}
+/* branding */
+#___gcse_2 .gcsc-more-maybe-branding-root {
+	display: none;
+}

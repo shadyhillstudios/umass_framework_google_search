@@ -1,0 +1,6 @@
+css:
+  header: true
+  version: 1.x
+  css:
+    theme:
+      css/umass_framework_google_search.min.css: {}
